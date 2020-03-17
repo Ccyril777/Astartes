@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Heading{% endblock %}
+
+{% block body %}
+    <h1>Edit Heading</h1>
+
+    {{ include('heading/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('heading_index') }}">back to list</a>
+
+    {{ include('heading/_delete_form.html.twig') }}
+{% endblock %}

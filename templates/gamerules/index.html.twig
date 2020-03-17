@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Règles générales{% endblock %}
+
+{% block body %}
+<div>
+    <div>
+        <h1>Règles Astartes</h1>
+            <h2>Principes Généraux</h2>
+                <h3>Jets de dés</h3>
+                    <p>Chaque jet de compétence ou de caractéristique se joue au dé 30. pour déterminer la réussite ou
+                    non d'une action, on lance un dé : en faisant égal ou moins que la valeur de la caractéristique ou la
+                    compétence, l'action est réussie. En faisant plus, c'est un échec.
+                    1 et 2 sont des réussites critiques. 29 et 30 sont des échecs critiques. </p>
+                <h3>Réussite Critique</h3>
+                    <p>La réussite critique octroie une action augmentée, c'est à dire qu'elle est parfaitement réussie. 
+                    Une réussite critique en attaque n'est PAS contrable par une Esquive, sauf en cas de réussite critique
+                    d'Esquive. Ainsi :</p>
+                        <ul>
+                            <li>– Une réussite critique en attaque avec réussite ou échec du jet d'Esquive entraine les 
+                            dégâts maximums de l'arme utilisée, sans lancer les dés.</li>
+                            <li>– Une réussite critique en attaque avec réussite critique du jet d'Esquive entraine les dégâts
+                            normaux de l'arme. Notez que le bonus dû à la réussite critique du jet d'Esquive s'applique.</li>
+                        </ul>
+                    <p>La réussite critique en Esquive ajoute un bonus de +1 de Protection permanent jusqu'à la fin de la
+                    Mission au space marine.</p>
+                <h3>Échec Critique</h3>
+                    <p>L'échec critique entraine des problèmes pires que ceux initialement prévus. Un échec critique en 
+                    attaque entraine, en plus d'effets contextuels, la perte de la prochaine action du space marine. Sur
+                    un jet d'esquive, un échec critique entraine un dommage d'armure immédiat.</p>
+                <h3>Actions</h3>
+                    <p>Lors d'un affrontement, chaque personnage dispose de deux actions. Ainsi, il peut agir deux fois
+                    par tour. Notez que certains effets, certaines utilisations d'armes etc nécessitent plusieurs actions.
+                    Voici une liste d'exemples qui nécessitent une action :</p>
+                        <ul>
+                            <li>– Changer d'armes/dégainer</li>
+                            <li>– Effectuer une attaque</li>
+                            <li>– Engager au corps à corps, se dégager</li>
+                            <li>– Utiliser une compétence</li>
+                            <li>– etc.</li>
+                        </ul>
+                <h3>Endommagement d'armure</h3>
+                    <p>Au fur et à mesure d'une mission, l'équipement du space marine va s'altérer. Il y a 4 phénomènes
+                    qui peuvent altérer l'armure :</p>
+                        <ul>
+                            <li>– Au début de chaque session de jeu (en dehors du premier scénario de mission), l'armure
+                            se dégrade. Il faut tirer un dé dans le tableau suivant.</li>
+                            <li>– Tomber à 0 PV : faire 3 jets sur le tableau.</li>
+                            <li>– Un événement contextuel défini par le MJ.</li>
+                            <li>– Un échec critique en esquive, qui entraine un jet de dé.</li>
+                        </ul>
+                <h3>Tableau d'endommagement d'armure</h3>
+                <table border="1">
+					<thead>
+						<tr>
+							<th scope="col">Zone touchée</th>
+							<th scope="col">Effet</th>
+							<th scope="col">Résultat au dé</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Adamantium endommagé</th>
+								<td>Endommagé L'armure a –1 en Protection 1</td>
+								<td>1</td>
+						</tr>
+						<tr>
+							<th scope="row">Auspex fissuré</th>
+								<td>L'équipement Auspex ne fonctionne plus. Le Space Marine a -1 sur toutes
+                                ses caractéristiques de combat et ne peut observer l'approche d'ennemi.
+                                Un second disfonctionnement de l'Auspex signifie que ses données de
+                                lentilles sont endommagées, et cela réduit encore de -1 ses
+                                caractéristiques de combats. Si à la troisième fois vous retombez sur
+                                Auspex, relancez le dé jusqu'à avoir un autre résultat.</td>
+								<td>2</td>
+						</tr>
+						<tr>
+							<th scope="row">Intégration d'implants</th>
+								<td>Réduit de 1 la valeur des compétences du Space Marine</td>
+								<td>3</td>
+						</tr>
+						<tr>
+							<th scope="row">Systèmes d'alimentation</th>
+								<td>Réduit de 3 les PV max du Space Marine</td>
+								<td>4</td>
+						</tr>
+                        <tr>
+							<th scope="row">Elément spécial</th>
+								<td>L'un des accessoires du space marine a été endommagé et ne fonctionne
+                                plus (bannière, sceau de pureté etc). S'il en a plusieurs, le space marine
+                                choisit. S'il n'en a aucun, relancez le dé jusqu'à tomber sur un autre
+                                résultat.</td>
+								<td>5</td>
+						</tr>
+                        <tr>
+							<th scope="row">Armure fonctionnelle</th>
+								<td>Aucun dommage constaté.</td>
+								<td>6</td>
+						</tr>
+				    </tbody>
+			    </table>
+                <br/>
+                <h3>Réquisition</h3>
+                    <p>Au début d'une Mission, les Space Marines ont accès à l'équipement de la Deathwatch. Chaque
+                    space marine dispose d'un certain nombre de point de réquisition et d'un équipement de base
+                    (Bolter, Pistolet Bolter, armure énergétique et lame de combat) puis il met en commun avec ses
+                    frères sa réquisition. Ensuite, à partir de cet ensemble de réquisition, le groupe peut sélectionner
+                    de l'équipement parmi l'arsenal de la Flotte Solar.
+                    Chaque fois qu'un space marine finit une mission, il augmente de 1 sa valeur de Réquisition.</p>
+
+                <h3>Mission</h3>
+                    <p>Une mission est l'ensemble de sessions de jeu amenant une histoire. On pourrait appeler cela
+                    «campagne ». Une mission début généralement sur la Flotte Solar.</p>
+                <h3>Niveau</h3>
+                    <p>Chaque fois qu'un space marine gagne un niveau, il peut choisir un don.</3>
+                <h3>Attaque Bonus</h3>
+                    <p>Une attaque bonus est une attaque qui ne prend pas d'action. Elle se joue néanmoins pendant
+                    votre tour.</p>
+                <h3>Unique/Actif/Passif</h3>
+                    <ul>
+                        <li>Unique signifie que la capacité marche une fois par Mission.</li> 
+                        <li>Actif signifie que la capacité fonctionne une fois par session de jeu.</li> 
+                        <li>Passif signifie que cela fonctionne tout le temps.</li>
+                    </ul>
+    </div>
+{% endblock %}

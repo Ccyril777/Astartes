@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}Arsenal{% endblock %}
+{% block body %}
+    <div class="container mt-5">
+        <h2 class="text-center">Listes des catégories d'arme</h2>
+        <p class="text-center">
+            Veuillez sélectionner votre catégorie :
+        </p>
+        <div class="heading row">
+            {% for heading in headings %}
+                <div class="card-heading col-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 mt-3 text-dark border">
+                    <div style="width: 100%;">
+                        <div class="card-body photos-heading">
+                            <a href="#"><p class="card-title text-center mt-3">{{ heading.name}}</p><img class="card-img-top image_heading" src="{{ heading.image }}" alt="image de la catégorie"/></a>
+                            <a href="#"><p class="card-title text-center mt-3">{{ heading.description}}</p></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

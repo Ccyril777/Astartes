@@ -1,0 +1,68 @@
+<header>
+  <div class="banner">
+      <div class="passerelle"></div>
+  </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('default') }}">PASSERELLE<span class="sr-only">(current)</span></a>
+        </li>
+        {% if is_granted('ROLE_USER') %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              RÈGLES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ path('gamerules') }}">Règles générales</a>
+              <a class="dropdown-item" href="{{ path('playerrules') }}">Création de personnages</a>
+            </div>
+          </li>
+        {% endif %}
+        {% if is_granted('ROLE_USER') %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ARSENAL
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ path('heading_list') }}">ARMEMENT</a>
+              <a class="dropdown-item" href="#">ARMURES</a>
+              <a class="dropdown-item" href="#">ÉQUIPEMENTS</a>
+            </div>
+          </li>
+        {% endif %}
+        {% if is_granted('ROLE_USER') %}
+            <li class="nav-item">
+            <a class="nav-link" href="{{ path('default') }}">MEMBRES<span class="sr-only">(current)</span></a>
+            </li>
+        {% endif %}
+        {% if is_granted('ROLE_USER') %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('default') }}">PROFIL<span class="sr-only">(current)</span></a>
+        </li>
+        {% endif %}
+        {% if is_granted('ROLE_ADMIN') %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{{ path('default') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ADMINISTRATION
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ path('heading_index') }}">Gestion des catégories d'arme</a>
+              <a class="dropdown-item" href="{{ path('default') }}">Gestion des recommandations</a>
+              <a class="dropdown-item" href="{{ path('default') }}">Inscrire un membre</a>
+            </div>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  {% if app.user %}
+    <a class="btn btn-primary ml-1" href="{{ path('app_logout') }}"> Se déconnecter</a>
+  {% else %}
+    <a class="btn btn-primary ml-1" href="{{ path('app_login') }}"> Se connecter</a>
+  {% endif %}
+  </nav>
+
+</header>
