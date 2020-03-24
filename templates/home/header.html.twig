@@ -41,7 +41,7 @@
         {% endif %}
         {% if is_granted('ROLE_USER') %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('default') }}">PROFIL<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">PROFIL<span class="sr-only">(current)</span></a>
         </li>
         {% endif %}
         {% if is_granted('ROLE_ADMIN') %}
@@ -52,7 +52,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{{ path('heading_index') }}">Gestion des rubriques d'arme</a>
               <a class="dropdown-item" href="{{ path('category_index') }}">Gestion des catégories d'arme</a>
-              <a class="dropdown-item" href="{{ path('default') }}">Inscrire un membre</a>
+              <a class="dropdown-item" href="{{ path('app_register') }}">Inscrire un membre</a>
             </div>
           </li>
         {% endif %}

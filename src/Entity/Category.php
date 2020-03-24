@@ -31,6 +31,12 @@ class Category
      */
     private $image;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Heading", inversedBy="categories")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $heading;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +74,18 @@ class Category
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getHeading(): ?Heading
+    {
+        return $this->heading;
+    }
+
+    public function setHeading(?Heading $heading): self
+    {
+        $this->heading = $heading;
 
         return $this;
     }
