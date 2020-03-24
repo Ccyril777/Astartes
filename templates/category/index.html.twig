@@ -8,8 +8,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Catégorie générale</th>
+                <th>Nom</th>
                 <th>Description</th>
                 <th>Image</th>
                 <th>actions</th>
@@ -18,7 +18,7 @@
         <tbody>
         {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
+                <td>{{ category.heading.name }}</td>
                 <td>{{ category.name }}</td>
                 <td>{{ category.description }}</td>
                 <td>{{ category.image }}</td>
